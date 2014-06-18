@@ -1,0 +1,160 @@
+/* Reset CSS  - this is to tell html how to behave 
+with the following if they have not been specifically formatted*/
+body, h1, h2, h3, ul, ol, li, p{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #000000;
+	font-family: "Century Gothic";
+	font-size: 12;
+
+}
+
+#Container{
+	width: 1000px;
+	background-color: #cccccc;
+	margin: 0 auto;
+}
+
+header{
+	width: 96%;
+	background-color: #454545;
+	min-height: 200px;
+	margin: 2% 2% 0;
+	
+}
+
+header h1 a{
+	background: url("../images/logo.png") no-repeat;
+	background-size: 100%;
+	display: block;
+	height: 154px;
+	width: 126px;
+	text-indent: -9999px;
+
+}
+/* Above write in Display-block to make custom tabs and size them */
+
+
+#MainContent{
+	width: 96%;
+	background-color: #1E5A2E;
+	min-height: 400px;
+	margin: 2% 2% 0;
+}
+
+article{
+	margin: 2%;
+	width: 46%;
+	float: left;
+	background: #cccccc;
+	min-height: 150px
+	;
+}
+
+footer{
+	width: 96%;
+	background-color: #651616;
+	min-height: 100px;
+	margin: 2% 2% 0;
+}
+
+/* Nav Styles */
+
+nav ul{
+
+
+}
+
+nav ul li{
+	float: left;
+	list-style: none;
+	position: relative;
+	
+
+}
+
+nav ul li a{
+	background: #000000;
+	color: #ffffff;
+	padding: 20px 40px;
+	display: inline-block;
+	text-transform: uppercase;
+
+
+}
+
+nav ul li a:hover{
+	background: #ffffff;
+	color: #000;
+}
+	
+	/* sub level nav*/
+
+nav ul li ul{
+		position: absolute;
+		top: 62px;
+		left: -9999px;
+	}
+nav ul li:hover ul{
+		left: 0;
+	}
+
+nav ul li ul li{
+		float: none;
+
+
+	}
+
+	nav ul li ul li a{
+		width: 150px;
+
+
+	}
+	.clear{
+		clear: both;
+	}
+
+/*	responsive styles - shrink and manouevre to screen sizes */
+
+@media screen and (max-width: 1000px){
+	#Container{
+		width:100%;
+	}
+
+}
+
+@media screen and (max-width: 650px){
+
+	#Container{
+		width:100%;
+	}
+	article{
+		float: none;
+		width: 96%;
+
+	}
+	nav ul li{
+
+		float: none;
+	}
+	nav ul li a{
+		width: 87%;
+		text-align: center;
+	}
+	nav ul li ul{
+		top: 0;
+	}
+
+	nav ul li:hover ul{
+		position: relative;
+
+	}
+	nav ul li ul li a{
+		width:87%;
+		text-align: center;
+			background: #ccc;
+	}
+}
